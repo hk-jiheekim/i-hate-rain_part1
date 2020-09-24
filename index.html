@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>i hate rain</title>
+	<style type="text/css">
+		body, h1, p{margin: 0; padding: 0;  }
+		 body{font-family: 'Jua', sans-serif; position: relative; }
+	    #back{background: url(img1/open.png); background-size: cover; background-attachment: fixed; position: relative; }
+	    img{position: absolute;}
+		.map2{height:100px;}
+		.wrap{width: 100%;   position: relative;  }
+
+
+		
+		 .rain{width: 5px; height: 40px; position: absolute; background: #6f9dcc; z-index: 999;
+			animation: rr 1s infinite ease-in; }
+		.rain:hover{height: 400px;}
+		
+		@keyframes rr{from{bottom: 800px;} to{bottom: 0px;}}
+
+		.lo{width: 60%; left: 20%; margin-top: -3%;}
+		.pl{position: absolute; width: 10%; left: 43%; margin-top: 10%;}
+		.pl:hover{opacity: 0.5;}
+
+
+
+	</style>
+</head>
+<body id="back">
+
+	<section class="map2">
+	</section>
+
+	<section class="wrap" >
+	
+		
+		
+		<img src="img1/logo.png" class="lo">
+		<a href="./index1.html"><img src="img1/play.png" class="pl"></a>
+		<div class="rain" id="tt"></div>
+
+
+	</section>
+	
+	<section class="map2">
+	</section>
+
+	<script type="text/javascript">
+		for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*50 +"px";
+			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.background = "#6f9dcc";
+			
+			document.body.appendChild(b);
+			}
+	</script>
+
+</body>
+</html>

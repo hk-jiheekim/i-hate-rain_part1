@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>나는 비가싫어</title>
+
+	<style type="text/css">
+		@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		body::-webkit-scrollbar{display: none;}
+		body, h1, p{margin: 0; padding: 0; }
+		body{ background-color: #848489; overflow-y: hidden;}
+		.map2{height:100px; }
+		.wrap{width: 100%; height:100%;  position: relative; padding-top: 100%;  font-family: 'BMJUA'; background-color: #848489;}
+	
+		.rain{width: 5px; height: 40px; position: fixed; background: #6f9dcc; z-index: 994;
+			animation: rr 1s infinite ease-in; }
+		.rain:hover{height: 400px;}
+		
+		@keyframes rr{from{bottom: 110%;} to{bottom: 0%;}}
+	
+		.wrap img{position: absolute; }
+		#img1{ width: 350%; height: 51%; max-height: 70%; left: 0%; top: -9%; z-index: 990;}
+		#img2 {width: 250%; height: 27%; top: -15%; ; left: 45%; z-index: 995; }
+		#walk{position: fixed; width: 20%; height: 40%; top: 65%; z-index: 999; left: 10%;}
+		#ha{font-size: 180%; z-index: 999; position: absolute; top: -2%; left: 5%; color:white; text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;}
+		
+		.sh{ left:148.5%;  width: 75%; height: 65%; top: 20%; z-index: 995; top: -12%; opacity: 0;}
+		.sh:hover {opacity: 0.5;}
+
+		#monitor{position: fixed; background: black; padding:5px; top: 0%; right: 0px; color: white; width: 6%; height: 5%; z-index: 9999; font-size: 20px; z-index: 999; opacity: 0;}
+
+
+		@keyframes up{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+
+
+		#b1{ z-index: 996; width: 10%; top: 10%; opacity:0; left: 65%;}
+		#b2{ z-index: 996; width: 6%;  top: 19%; left: 88%; opacity:0;}
+		#b3{ z-index: 996; width: 7%;  top: 16%; left: 100%; opacity:0;}
+		#b4{ z-index: 996; width: 7%; left: 119.5%; top: 8%; opacity:0;}
+		#b5{ z-index: 996; width: 7%; left:119.5%; top: 30%; opacity:0;}
+
+		#bb1{ z-index: 996; width: 7%; left: 159.5%; top: 9%; opacity:0;}
+		#bb2{ z-index: 996; width: 5%; left: 169%; top: 12%; opacity:0;}
+		#bb3{ z-index: 996; width: 6%; left: 175.5%; top: 5%; opacity:0;}
+
+		#bb4{ z-index: 996; width: 8%; left: 182%; top: 23%; opacity:0;}
+		#bb5{ z-index: 996; width: 6%; left:184%; top: 8.5%; opacity:0;}
+
+
+		#bb6{ z-index: 996; width: 5%; left: 193%; top: 5.5%; opacity:0;}
+		#bb7{ z-index: 996; width: 6%; left: 190%; top: 15.5%; opacity:0;}
+		#bb8{ z-index: 996; width: 7%; left: 205.5%; top: 4%; opacity:0;}
+		#bb9{ z-index: 996; width: 5%; left: 205.5%; top: 17.5%; opacity:0;}
+
+		#bbb1{ z-index: 996; width: 7%; left:221%; top: 31%; opacity:0;}
+		#bbb4{ z-index: 996; width: 7%; left: 264%; top: 11%; opacity:0;}
+
+		#bbb2{ z-index: 996; width: 5.5%; left: 282%; top: 18%; opacity:0;}
+		#bbb3{ z-index: 996; width:6%; left: 323%; top: 23%; opacity:0;}	
+
+		
+	</style>
+
+</head>
+<body id="back">
+	<section class="map2">
+	</section>
+
+	<section class="wrap">
+
+		<div class="rain" id="tt"></div>
+		<h1 id="ha">*혐오표현을 가장 많이 사용하는 곳을 가보자!</h1>
+
+	
+		<img src="img1/i.png" class="ab" id="img1">
+		<img src="img1/i3.png" class="aa" id="img2">
+		<a href="https://hk-jiheekim.github.io/i-hate-rain_part2/"><img src="img1/school.png" id="sch" class="sh"></a>
+		<img src="img1/i.gif" id="walk">
+
+		<img src="img1/i4.png" class="a4" id="b1">
+		<img src="img1/ii2.png" class="a5" id="b2">
+		<img src="img1/ii3.png" class="a6" id="b3">
+		<img src="img1/ii4.png" class="a7" id="b4">
+		<img src="img1/ii5.png" class="a8" id="b5">
+
+
+		<img src="img1/iii1.png" class="aa1" id="bb1">
+		<img src="img1/iii2.png" class="aa2" id="bb2">
+		<img src="img1/iii3.png" class="aa3" id="bb3">
+
+		<img src="img1/iii4.png" class="aa4" id="bb4">
+		<img src="img1/iii5.png" class="aa5" id="bb5">
+
+		<img src="img1/iii6.png" class="aa6" id="bb6">
+		<img src="img1/iii7.png" class="aa7" id="bb7">
+		<img src="img1/iii8.png" class="aa8" id="bb8">
+		<img src="img1/iii9.png" class="aa9" id="bb9">
+
+		<img src="img1/iiii1.png" class="aaa1" id="bbb1">
+		<img src="img1/iiii2.png" class="aaa2" id="bbb2">
+		<img src="img1/iiii3.png" class="aaa3" id="bbb3">
+		<img src="img1/iiii4.png" class="aaa4" id="bbb4">
+
+
+
+
+		<div id="monitor"></div>
+
+	</section>
+
+	<section class="map2">
+	</section>
+<script type="text/javascript">
+	window.onscroll = function(){
+		var t = document.documentElement.scrollLeft +
+		document.body.scrollLeft;
+		monitor.innerHTML = t.toFixed(1);
+
+		if(t > 330){b1.style.animation = "up 0.5s forwards";}
+		else{b1.style.animation = "";}
+		if(t > 620){b2.style.animation = "up 0.2s forwards";}
+		else{b2.style.animation = "";}
+
+		if(t > 900){b3.style.animation = "up 0.2s forwards";}
+		else{b3.style.animation = "";}
+		if(t > 900){b4.style.animation = "up 0.2s forwards";}
+		else{b4.style.animation = "";}
+		if(t > 1000){b5.style.animation = "up 0.2s forwards";}
+		else{b5.style.animation = "";}
+
+
+		if(t > 2000){bb1.style.animation = "up 0.2s forwards";}
+		else{bb1.style.animation = "";}
+		if(t > 2000){bb2.style.animation = "up 0.2s forwards";}
+		else{bb2.style.animation = "";}
+		if(t > 2000){bb3.style.animation = "up 0.2s forwards";}
+		else{bb3.style.animation = "";}
+
+		if(t > 2100){bb4.style.animation = "up 0.2s forwards";}
+		else{bb4.style.animation = "";}
+		if(t > 2100){bb5.style.animation = "up 0.2s forwards";}
+		else{bb5.style.animation = "";}
+
+		if(t > 2200){bb6.style.animation = "up 0.2s forwards";}
+		else{bb6.style.animation = "";}
+		if(t > 2200){bb7.style.animation = "up 0.2s forwards";}
+		else{bb7.style.animation = "";}
+		if(t > 2200){bb8.style.animation = "up 0.2s forwards";}
+		else{bb8.style.animation = "";}
+		if(t > 2200){bb9.style.animation = "up 0.2s forwards";}
+		else{bb9.style.animation = "";}
+
+		if(t > 3000){bbb1.style.animation = "up 0.2s forwards";}
+		else{bbb1.style.animation = "";}
+		if(t > 3300){bbb4.style.animation = "up 0.2s forwards";}
+		else{bbb4.style.animation = "";}
+
+		if(t > 3850){bbb2.style.animation = "up 0.2s forwards";}
+		else{bbb2.style.animation = "";}
+		if(t > 3850){bbb3.style.animation = "up 0.2s forwards";}
+		else{bbb3.style.animation = "";}
+
+	}
+
+	for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*50 +"px";
+			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.background = "#6f9dcc";
+			
+			document.body.appendChild(b);
+			}
+
+			window.onkeydown = function(){
+		if (event.keyCode == 37){
+			walk.src = "img1/i.gif";
+			walk.style.transform = "rotateY(180deg)";
+		}
+		else if (event.keyCode == 39){
+			walk.src = "img1/i.gif";
+			walk.style.transform = "rotateY(0deg)";
+		}
+
+	}
+</script>
+</body>
+</html>
