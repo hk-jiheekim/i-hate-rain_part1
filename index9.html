@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>나는 비가싫어</title>
+	<title>i hate rain</title>
+
+	<link rel="shortcut icon" href="/파비.ico" type="image/x-icon">
+	<link rel="icon" href="/파비.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="파비.ico" type="image/x-icon">
+	<link rel="icon" href="/파비.ico" type="image/x-icon">
 
 	<style type="text/css">
 		@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
@@ -22,8 +27,9 @@
 		#img1{ width: 350%; height: 51%; max-height: 70%; left: 0%; top: -9%; z-index: 990;}
 		#img2 {width: 250%; height: 27%; top: -15%; ; left: 45%; z-index: 995; }
 		#walk{position: fixed; width: 20%; height: 40%; top: 65%; z-index: 999; left: 10%;}
-		#ha{font-size: 180%; z-index: 999; position: absolute; top: -2%; left: 5%; color:white; text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;}
-		
+		#ha{font-size: 200%; z-index: 999; position: absolute; top: -2%; left: 5%; color:white; text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;}
+		#img4{z-index: 999; width: 12.5%; top: 90%; left:87%; opacity: 0.9; cursor: pointer; position: fixed;}
+		#img4:hover{opacity: 0.5;}
 		.sh{ left:148.5%;  width: 75%; height: 65%; top: 20%; z-index: 995; top: -12%; opacity: 0;}
 		.sh:hover {opacity: 0.5;}
 
@@ -35,6 +41,8 @@
 				to{opacity: 1;}
 			}
 
+		.of1{position: absolute; width: 4%; z-index: 999; top: 0.5%; left: 6%; cursor: pointer; }
+		.of1:hover{opacity: 0.5;}
 
 		#b1{ z-index: 996; width: 10%; top: 10%; opacity:0; left: 65%;}
 		#b2{ z-index: 996; width: 6%;  top: 19%; left: 88%; opacity:0;}
@@ -73,8 +81,11 @@
 
 		<div class="rain" id="tt"></div>
 		<h1 id="ha">*혐오표현을 가장 많이 사용하는 곳을 가보자!</h1>
+		<img src="img1/off.png" id="of" class="of1">
+		<audio src="rain.flac" loop id="aa" ></audio>
 
-	
+		<a href="./index.html"><img src="img1/logo.png" class="lo" id="img4"></a>
+		
 		<img src="img1/i.png" class="ab" id="img1">
 		<img src="img1/i3.png" class="aa" id="img2">
 		<a href="https://hk-jiheekim.github.io/i-hate-rain_part2/"><img src="img1/school.png" id="sch" class="sh"></a>
@@ -171,8 +182,8 @@
 			b.id = i;
 			b.clssName = "rain";
 			b.style.left = Math.random()*window.innerWidth + "px";
-			b.style.height = Math.random()*50 +"px";
-			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.height = Math.random()*45 +"px";
+			b.style.animationDuration = Math.random()*0.5 + "s";
 			b.style.background = "#6f9dcc";
 			
 			document.body.appendChild(b);
@@ -189,6 +200,16 @@
 		}
 
 	}
+	var ofstate ="off";
+		of.onclick=function(){
+			if(ofstate =="off"){
+			of.src = "img1/on.png";
+			aa.play();
+			ofstate = "on";}
+			else{
+				of.src = "img1/off.png";
+				aa.pause();
+				ofstate = "off";}}
 </script>
 </body>
 </html>

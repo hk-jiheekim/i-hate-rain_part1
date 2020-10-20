@@ -2,48 +2,46 @@
 <html>
 <head>
 	<title>i hate rain</title>
+
+	<link rel="shortcut icon" href="/파비.ico" type="image/x-icon">
+	<link rel="icon" href="/파비.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="파비.ico" type="image/x-icon">
+	<link rel="icon" href="/파비.ico" type="image/x-icon">
+
+	<meta property="og:image" content="thumbnail.png">
+	<meta property="og:title" content="i hate rain" />
+	<meta property="og:description" content="i hate rain" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://hk-jiheekim.github.io/i-hate-rain_part1/" />
+
 	<style type="text/css">
-		body, h1, p{margin: 0; padding: 0;  }
-		 body{font-family: 'Jua', sans-serif; position: relative; }
-	    #back{background: url(img1/open.png); background-size: cover; background-attachment: fixed; position: relative; }
-	    img{position: absolute;}
-		.map2{height:100px;}
-		.wrap{width: 100%;   position: relative;  }
+		@font-face {
+    font-family: 'BMJUA';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal;font-style: normal;}
+		#back{background-image: url(img1/open.png); background-size: cover;}
+		.ha{position: absolute; font-size: 170%; top: 33.5%; left: 43%;font-family: 'BMJUA'; color: white;text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black; opacity: 0.8;}
 
-
-		
-		 .rain{width: 5px; height: 40px; position: absolute; background: #6f9dcc; z-index: 999;
+		.rain{width: 5px; height: 40px; position: absolute; background: #6f9dcc; z-index: 999;
 			animation: rr 1s infinite ease-in; }
 		.rain:hover{height: 400px;}
+
+		img{position: absolute;}
+
+		.lo{width: 65%; left: 15%; top: 6%;}
+		.pl{position: absolute; width: 8%; left: 45%; top:40%;}
+		.pl:hover{opacity: 0.5;}
 		
 		@keyframes rr{from{bottom: 800px;} to{bottom: 0px;}}
-
-		.lo{width: 60%; left: 20%; margin-top: -3%;}
-		.pl{position: absolute; width: 10%; left: 43%; margin-top: 10%;}
-		.pl:hover{opacity: 0.5;}
-
-
-
 	</style>
 </head>
 <body id="back">
+	<div class="rain" id="tt"></div>
 
-	<section class="map2">
-	</section>
-
-	<section class="wrap" >
-	
-		
-		
+	<div class="wrap">
+		<h1 class="ha">pc사용을 권장합니다</h1>
 		<img src="img1/logo.png" class="lo">
 		<a href="./index1.html"><img src="img1/play.png" class="pl"></a>
-		<div class="rain" id="tt"></div>
-
-
-	</section>
-	
-	<section class="map2">
-	</section>
+		
+	</div>
 
 	<script type="text/javascript">
 		for(var i=0; i<50; i++){
@@ -52,13 +50,14 @@
 			b.id = i;
 			b.clssName = "rain";
 			b.style.left = Math.random()*window.innerWidth + "px";
-			b.style.height = Math.random()*50 +"px";
-			b.style.animationDuration = Math.random()*1 + "s";
+			b.style.height = Math.random()*45 +"px";
+			b.style.animationDuration = Math.random()*0.5 + "s";
 			b.style.background = "#6f9dcc";
 			
 			document.body.appendChild(b);
 			}
 	</script>
+
 
 </body>
 </html>
